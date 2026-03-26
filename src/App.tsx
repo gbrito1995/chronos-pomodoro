@@ -6,6 +6,9 @@ import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
 import { DefaultInput } from './components/DefaultInput';
 import { Cycles } from './components/Cycles';
+import { DefaultButton } from './components/DefaultButton';
+import { PlayCircle } from 'lucide-react';
+import { Footer } from './components/Footer';
 
 export function App() { 
 
@@ -29,7 +32,7 @@ export function App() {
                             id='task' 
                             labelText='task' 
                             type='text'
-                            disabled/>
+                        />
                     </div>
 
                     <div className='formRow'>
@@ -41,10 +44,14 @@ export function App() {
                     </div>          
                     
                     <div className='formRow'>
-                        <button>Enviar</button>
+                        <DefaultButton icon={<PlayCircle />} />
                     </div>                                                   
                 </form>
             </Container> 
+
+            <Container>
+                <Footer /> 
+            </Container>
         </>
     );
 }
